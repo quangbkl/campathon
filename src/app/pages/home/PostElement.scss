@@ -1,0 +1,50 @@
+.PostElement {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .ItemHover {
+    display: block;
+  }
+
+  .Item {
+
+    .Caption {
+
+      img {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+      }
+    }
+
+    .Title {
+      text-transform: uppercase!important;
+      font: 700 14px/21px "Open Sans", sans-serif;
+      color: #474747;
+      margin-top: 15px;
+    }
+
+    .HashTag {
+      text-transform: uppercase!important;
+      font: 400 12px/18px "Open Sans", sans-serif;
+      color: #888888;
+      margin-top: 5px;
+    }
+  }
+
+  .ItemHover {
+    font: 600 32px/36px "Open Sans", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    line-height: calc(40px + 15vw);
+    text-align: center;
+  }
+}
