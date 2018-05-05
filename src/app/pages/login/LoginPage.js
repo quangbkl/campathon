@@ -114,8 +114,8 @@ class LoginPage extends Component {
                                     </button>
                                 </div>
 
-                                <div className="">
-                                    <a href="#" className="sign-up">
+                                <div className="sign-up">
+                                    <a href="#" >
                                         Sign Up
                                     </a>
                                 </div>
