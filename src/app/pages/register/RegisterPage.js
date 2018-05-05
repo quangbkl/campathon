@@ -75,29 +75,29 @@ class RegisterPage extends Component {
         return (
             <div className="LoginPage">
                 <div className="limiter">
-                    <div className="container-login">
-                        <div className="wrap-login">
-                            <form className="login-form">
-                                <span className="login-form-title">	Register</span>
-                                <div className="wrap-input100 " data-validate="Type user name">
+                    <div className="container-register">
+                        <div className="wrap-register">
+                            <form className="register-form">
+                                <span className="register-form-title">	Register</span>
+                                <div className="wrap-register-input " data-validate="Type user name">
                                     <input id="first-name" className="input" type="text" name="username"
                                            placeholder="User name"
                                            onChange={this._handleChangeInput.bind(this, "userName")}/>
-                                    <span className="focus-input"></span>
+                                    <span className="focus-register-input"></span>
                                 </div>
-                                <div className="wrap-input100" data-validate="Type password">
+                                <div className="wrap-register-input" data-validate="Type password">
                                     <input className="input" type="password" placeholder="Password"
                                            onChange={this._handleChangeInput.bind(this, "password")}/>
-                                    <span className="focus-input"></span>
+                                    <span className="focus-register-input"></span>
                                 </div>
 
-                                <div className="wrap-input100" data-validate="Type password">
+                                <div className="wrap-register-input" data-validate="Type password">
                                     <input className="input" type="password" placeholder="Confirm password"
                                            onChange={this._handleChangeInput.bind(this, "confirmPassword")}/>
-                                    <span className="focus-input"></span>
+                                    <span className="focus-register-input"></span>
                                 </div>
 
-                                <div className="container-login100-form-btn">
+                                <div className="container-register-form-btn">
                                     <button className="login100-form-btn">
                                         Sign up
                                     </button>
@@ -108,7 +108,7 @@ class RegisterPage extends Component {
                                 </div>
                             </form>
 
-                            <div className="login100-more"><img className="background"
+                            <div className="register-more"><img className="background"
                                                                 src="https://nces.ed.gov/programs/coe/images/nav/coe_hp_new.png"
                                                                 alt=""/></div>
                         </div>

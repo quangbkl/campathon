@@ -1,0 +1,32 @@
+.page-not-found {
+  min-height: 650px;
+
+
+  .text-404 {
+    float: left;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.84);
+    display: block;
+    font-family: "Segoe UI";
+    font-size: 202px;
+    font-style: normal;
+    font-weight: 600;
+    height: 202px;
+    letter-spacing: normal;
+    line-height: 202px;
+    display: inline;
+
+  }
+
+  .help {
+    padding-left: 20px;
+    float: left;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: "Segoe UI";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    margin: 30px;
+  }
+}
+
