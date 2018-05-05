@@ -1,4 +1,64 @@
-.Contact{
+.Contact {
   min-height: 650px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  line-height: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  .Title {
+    .ContactTitle {
+      margin-top: 100px;
+      color: #555555;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      width: 100%;
+      display: block;
+      padding-bottom: 34px;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+
+  .Form {
+    font-size: 14px;
+    color: #666666;
+    border: #00ad5f 1px;
+    box-sizing: border-box;
+  }
+  .FormContact {
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+
+    .Name{
+      width: 100%;
+      padding: 10px 10px;
+    }
+    .Email{
+      width: 100%;
+    }
+    .Type{
+      width: 100%;
+      text-align: left;
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .Select{
+      display: inline-block;
+    }
+    .Content{
+      width: 100%;
+    }
+    .Button{
+      border: #00ad5f 1px;
+      background: none;
+      text-align-all: center;
+      margin-right: 25px;
+      padding-top: 10px;
+    }
+  }
 
 }
