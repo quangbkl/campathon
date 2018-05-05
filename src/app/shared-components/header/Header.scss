@@ -1,10 +1,14 @@
 .Header {
-    background-color: #212529;
-
-    .Logo{
-        background: url("/logo-u.png");
+    //background-color: #333;
+    background-color: red;
+    .Logo {
         float: left;
         height: 40px;
         width: 40px;
+
+        img {
+            height: 100%;
+        }
     }
+
 }

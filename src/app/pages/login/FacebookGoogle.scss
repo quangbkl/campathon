@@ -1,14 +1,59 @@
 .FacebookGoogle {
   content: "";
-  display: table;
   clear: both;
+  width :100%;
   .Google {
-    //display: inline-block;
-    float: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+
+    font-family: "Segoe UI";
+    font-size: 12px;
+
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    margin: 5px;
+    background-color: #D14836;
+
+
   }
 
   .Facebook {
-    //display: inline-block;
-    float: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+
+    font-family: "Segoe UI";
+    font-size: 12px;
+
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    margin: 5px;
+    background-color: #4C69BA;
+
   }
 }
