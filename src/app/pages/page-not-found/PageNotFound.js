@@ -10,8 +10,8 @@ class PageNotFound extends Component {
                 <h1 className="text-404">404</h1>
 
                 <div className="help">
-                    Oops! Looks like this page doesn't exits.<br/>
-                    You could return <Link to="/">to the homepage</Link> or or feel free to report this issue.
+                    Oops! Có vẻ như trang web này không tồn tại.<br/>
+                    Bạn có thể về  <Link to="/">trang chủ</Link> hoặc báo lỗi cho chúng tôi.
                 </div>
             </div>
         );
