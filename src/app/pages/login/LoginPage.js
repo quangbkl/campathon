@@ -106,7 +106,7 @@ class LoginPage extends Component {
                                     <span className="focus-input100"></span>
                                 </div>
 
-                                <div className="containerlogin100-form-btn">
+                                <div className="container-login100-form-btn">
                                     <button className="login100-form-btn">
                                         Sign in
                                     </button>
