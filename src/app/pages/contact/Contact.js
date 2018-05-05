@@ -30,8 +30,8 @@ class Contact extends Component {
                                onChange={this._handleChangeInput.bind(this, "name")}/>
                         <input className="Email" type="text" name="email" placeholder="Email"
                                    onChange={this._handleChangeInput.bind(this, "email")}/>
-                        <label className="Type">Loại</label>
-                        <select className="Select">
+                        {/*<label className="Type">Loại</label>*/}
+                        <select className="Select" placeholder="Chọn một liên hệ" >
                             <option value="0">Liên hệ</option>
                             <option value="1">Góp ý</option>
                             <option value="2">Câu hỏi</option>
