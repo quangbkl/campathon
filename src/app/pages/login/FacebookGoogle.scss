@@ -1,0 +1,15 @@
+.FacebookGoogle {
+  content: "";
+  display: table;
+  clear: both;
+  .Google {
+    //display: inline-block;
+    float: left;
+  }
+
+  .Facebook {
+    //display: inline-block;
+    float: left;
+
+  }
+}
