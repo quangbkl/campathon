@@ -11,7 +11,7 @@ class View extends Component {
         const {title, content} = this.state;
 
         return(
-            <div>
+            <div className="View">
                 <div className="Title">
                     <span className="ContactTitle">Day la tieu de</span>
                 </div>
