@@ -18,7 +18,7 @@ class Contact extends Component {
     }
 
     render(){
-        const {}=this.state;
+        const {email,name,type,content}=this.state;
         return(
             <div className="Contact">
                 <div className="Title">
