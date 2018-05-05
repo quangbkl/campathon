@@ -19,3 +19,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.idea/
+
+**/*.css
+
+package-lock.json
+
+yarn.lock
+/bower_components

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/campathon.iml" filepath="$PROJECT_DIR$/.idea/campathon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/crush-hunt-app.iml" filepath="$PROJECT_DIR$/.idea/crush-hunt-app.iml" />
     </modules>
   </component>
 </project>
