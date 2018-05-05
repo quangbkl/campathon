@@ -4,33 +4,7 @@ import PostElement from "./PostElement";
 
 class ListPost extends Component {
     render() {
-        const {title} = this.props;
-        const data = [
-            {
-                image: 'https://c1.staticflickr.com/3/2810/33291838300_375b742311_b.jpg',
-                title: 'sdfdgfdsf',
-                hashTag: 'dfgddsdf',
-                link: './sdjkfh'
-            },
-            {
-                image: 'https://c1.staticflickr.com/3/2810/33291838300_375b742311_b.jpg',
-                title: 'sdfdgfdsf',
-                hashTag: 'dfgddsdf',
-                link: './sdjkfh'
-            },
-            {
-                image: 'https://c1.staticflickr.com/3/2810/33291838300_375b742311_b.jpg',
-                title: 'sdfdgfdsf',
-                hashTag: 'dfgddsdf',
-                link: './sdjkfh'
-            },
-            {
-                image: 'https://c1.staticflickr.com/3/2810/33291838300_375b742311_b.jpg',
-                title: 'sdfdgfdsf',
-                hashTag: 'dfgddsdf',
-                link: './sdjkfh'
-            }
-        ];
+        const {title, data} = this.props;
 
         return (
             <div className="ListPost">
