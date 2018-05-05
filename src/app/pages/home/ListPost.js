@@ -39,10 +39,6 @@ class ListPost extends Component {
                 </div>
 
                 <ul>
-                    <li>
-                        <PostElement element={data[0]}/>
-                    </li>
-
                     {
                         data.map((element) =>
                             <li>
@@ -50,7 +46,6 @@ class ListPost extends Component {
                             </li>
                         )
                     }
-
                 </ul>
             </div>
         );
