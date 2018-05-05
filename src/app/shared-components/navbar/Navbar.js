@@ -2,30 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 import "./Navbar.css"
-import {addAuthListener, isAuthenticated, removeAuthListener, setAuthState} from "../../../services/AuthServices";
 
 class Navbar extends Component {
 
-    state = {
-        auth: isAuthenticated(),
-    };
-
-    componentDidMount() {
-        addAuthListener(this._handleOnAuthChange);
-    }
-
-    componentWillUnmount() {
-        removeAuthListener(this._handleOnAuthChange);
-    }
-
-    _handleOnAuthChange = () => {
-        this.setState({
-            auth: isAuthenticated(),
-        })
-    };
-
     render() {
-        const {auth} = this.state;
 
         return(
             <div className="Navbar">
@@ -33,20 +13,20 @@ class Navbar extends Component {
 
                 <ul>
                     <li>
-                        <Link className="active" to="/">Home</Link>
+                        <Link className="active" to="/">Trang chủ</Link>
                     </li>
                     <li>
-                        <Link to="/news">News</Link>
+                        <Link to="/news">Bản tin</Link>
                     </li>
                     <li>
-                        <Link to="/upload">Upload</Link>
+                        <Link to="/upload">Tài liệu</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/contact">Liên hệ</Link>
                     </li>
 
                     <li className="RightButton">
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">Đăng nhập</Link>
                     </li>
                 </ul>
             </div>

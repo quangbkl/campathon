@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
+import "./News.css";
 
 class News extends Component {
     render(){
         return(
-            this.prop.children
+           <div className="News">
+                <p>This is Newfeed</p>
+           </div>
         );
     }
 }

@@ -8,6 +8,8 @@ import LoginPage from "./pages/login/LoginPage";
 import RegisterPage from "./pages/register/RegisterPage";
 import Footer from "./shared-components/footer/Footer";
 import FacebookGoogle from "./pages/login/FacebookGoogle";
+import Contact from "./pages/contact/Contact";
+import News from "./pages/news/News";
 
 class App extends Component {
     render() {
@@ -20,6 +22,8 @@ class App extends Component {
                     <Route path="/login" component={LoginPage}/>
                     <Route path="/FacebookGoogle" component={FacebookGoogle}/>
                     <Route path="/register" component={RegisterPage}/>
+                    <Route path ="/contact" component={Contact}/>
+                    <Route path ="/news" component={News}/>
                     <Route component={PageNotFound}/>
                 </Switch>
                 <Footer/>
