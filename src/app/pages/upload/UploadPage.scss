@@ -1,0 +1,132 @@
+.UploadPage {
+    .wrapper {
+        display: flex;
+        align-items: stretch;
+        background-color: white;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+    }
+
+    section {
+        display: flex;
+        flex-flow: row nowrap;
+        flex-grow: 1;
+        max-width: 80%;
+        margin-left: 10%;
+
+        .content {
+            background-color: white;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 79%;
+            border-radius: 3px;
+            height: auto;
+
+            .header {
+                text-align: center;
+                padding-top: 13px;
+                padding-bottom: 13px;
+                border: solid #ebebeb;
+                h2 {
+                    color: red;
+                }
+            }
+
+            .img_upload {
+                width: auto; //614px
+                height: auto;
+
+                border: 3px dashed darkgray;
+
+                .thumb {
+                    height: auto;
+                    width: 95%;
+                }
+            }
+            .informationUpload {
+
+                .link {
+                    width: 75%;
+                    margin-top: 4px;
+                    margin-left: 10px;
+                    box-sizing: border-box;
+                    padding-bottom: 5px;
+                    padding-top: 5px;
+                    border-left: #cfcfcf;
+                    border-top: 1px solid #cfcfcf;
+                    border-left: 1px solid #cfcfcf;
+                    border-right: 1px solid #cfcfcf;
+                    border-radius: 3px;
+                }
+
+                .link_button {
+                    padding: 5px 10px;
+                    border: 2px solid deepskyblue;
+                    background-color: deepskyblue;
+                    color: white;
+                    font-family: sans-serif;
+                    border-radius: 3px;
+                    margin-left: 2px;
+                    margin-top: 4px;
+                    cursor: pointer;
+                }
+
+                .caption {
+                    height: 100%;
+                    padding: 0 15px 150px;
+                    text-align: left;
+                    min-height: 200px;
+                    font-size: 15px;
+                    width: 100%;
+                    margin-top: 20px;
+                    border: 4px solid #efefef;
+                }
+
+                .button_form[disabled] {
+                    cursor: not-allowed;
+                    background-color: #dcdcdc;
+                    color: white;
+                    border: 1px solid #dcdcdc;
+
+                }
+
+                .button_form[disabled]:hover {
+                    background-color: #dcdcdc;
+                }
+
+                .button_form {
+                    float: right;
+                    background-color: deepskyblue;
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                    min-width: 150px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    line-height: 100%;
+                    cursor: pointer;
+                    font-weight: 700;
+                    text-align: center;
+                    padding: 12px 15px;
+                    font-size: 17px;
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+                    border-radius: 7px;
+                    transition: all .1s ease-in-out;
+                    text-rendering: auto;
+                    border: 1px solid white;
+                    color: white;
+                }
+
+                .button_form:hover {
+                    background-color: #ff3228;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

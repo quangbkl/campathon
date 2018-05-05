@@ -1,0 +1,31 @@
+.Footer {
+    background-color: #fafafa;
+
+    .Wrapper {
+        margin: 0 auto;
+        max-width: 935px;
+        padding: 38px 0;
+        font-weight: 600;
+    }
+
+    .links {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            padding: 2px 0;
+            margin-right: 16px;
+            margin-bottom: 7px;
+
+            a {
+                line-height: 20px;
+                text-decoration: none;
+                color: #003569;
+            }
+        }
+    }
+
+    .copyright {
+        color: #999;
+    }
+}

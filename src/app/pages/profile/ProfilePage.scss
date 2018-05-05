@@ -1,0 +1,187 @@
+.ProfilePage {
+    .Wrapper {
+        width: 1000px;
+        margin: 50px auto auto;
+        background-color: #fafafa;
+
+        .ProfileHeader {
+            border-bottom: rgb(220, 227, 236) solid 1px;
+
+            .Avatar {
+                float: left;
+
+                img {
+                    border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    width: 152px;
+                    height: 152px;
+                    float: left;
+                    margin-left: 70px;
+                    cursor: pointer;
+                }
+            }
+
+            .Info {
+                height: 200px;
+                margin-left: 300px;
+
+                .UserInformation {
+                    background-color: #fafafa;
+                    height: 75px;
+
+                    .NickName {
+                        float: left;
+                        margin-top: 20px;
+                    }
+
+                    .EditProfile {
+                        button {
+                            float: left;
+                            height: 28px;
+                            width: 200px;
+                            margin-left: 30px;
+                            margin-top: 22px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .IconEdit {
+                        img {
+                            height: 24px;
+                            width: 24px;
+                            margin-left: 30px;
+                            margin-top: 22px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .StatusFollow {
+                    .NumPost {
+                        float: left;
+                    }
+
+                    .NumFollow1 {
+                        float: left;
+                        margin-left: 30px;
+                        cursor: pointer;
+                    }
+
+                    .NumFollow2 {
+                        span {
+                            margin-left: 30px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .UserDetails {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .SaveAndPost {
+            height: 30px;
+            margin: auto auto 10px 400px;
+
+            .Post {
+                float: left;
+                cursor: pointer;
+                height: 40px;
+                width: 70px;
+
+                span {
+                    line-height: 40px;
+                }
+            }
+
+            .Save {
+                cursor: pointer;
+                float: left;
+                height: 40px;
+                width: 70px;
+                margin-left: 40px;
+
+                span {
+                    line-height: 40px;
+                }
+            }
+        }
+
+        .Main {
+            .Start {
+                height: 220px;
+                float: right;
+                width: 620px;
+                text-align: center;
+                padding-top: 150px;
+                background-color: white;
+
+                #appstore {
+                    width: 136px;
+                    height: 40px;
+                    cursor: pointer;
+                }
+
+                #chplay {
+                    width: 136px;
+                    height: 40px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .Image {
+                    height: 380px;
+                    width: 380px;
+                }
+            }
+
+            img {
+                width: 300px;
+                height: 300px;
+                margin-right: 30px;
+                cursor: pointer;
+            }
+
+            .Ramrm {
+                margin-left: 24px;
+                margin-bottom: 20px;
+                color: rgb(162, 166, 170);
+            }
+
+            .ImagePost {
+                img {
+                    width: 300px;
+                    height: 300px;
+                    margin-right: 30px;
+                    cursor: pointer;
+                }
+            }
+
+            .MainText {
+                width: 375px;
+                margin-left: 300px;
+                text-align: center;
+            }
+
+            .SaveText {
+                font-size: 35px;
+                text-align: center;
+            }
+
+            .IconSave {
+                text-align: center;
+
+                img {
+                    text-align: center;
+                    width: 62px;
+                    height: 62px;
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+}

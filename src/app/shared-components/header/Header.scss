@@ -1,0 +1,70 @@
+.Header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .0975);
+    padding: 26px 40px;
+
+    .Logo {
+        text-indent: -9999px;
+        background: url("/assets/images/sprite_core.png") -177px -264px;
+        height: 35px;
+        width: 176px;
+    }
+
+    .SearchForm {
+        font-size: 14px;
+        position: relative;
+
+        .icon {
+            background: url("/assets/images/sprite_core.png") no-repeat -546px -114px;
+            height: 10px;
+            width: 10px;
+            display: inline-block;
+            position: absolute;
+            top: 9px;
+            left: 11px;
+        }
+
+        input {
+            border: solid 1px #dbdbdb;
+            border-radius: 3px;
+            color: #262626;
+            outline: 0;
+            padding: 3px 10px 3px 26px;
+            z-index: 2;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    .RightActions {
+        ul {
+            list-style: none;
+            font-size: 14px;
+            line-height: 20px;
+
+            li {
+                .btn-outline {
+                    border: 1px solid #dbdbdb;
+
+                    &:hover {
+                        border-color: #b1b1b1;
+
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    padding: 4px 12px;
+                    border-radius: 3px;
+                    line-height: 21px;
+                    color: #666;
+                    transition: all 500ms ease-in-out;
+
+                    &:hover {
+                        color: #111;
+                    }
+                }
+            }
+        }
+    }
+}

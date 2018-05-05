@@ -1,0 +1,379 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  #root {
+    height: 100%;
+  }
+}
+
+#app {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  #post-detail-main .wrap .wrap1 article {
+    display: flex;
+    flex-direction: column;
+    header {
+      width: 278px;
+      position: absolute;
+    }
+    .anh-post {
+      min-height: 450px;
+      position: relative;
+    }
+    .right_comment {
+      position: absolute;
+      width: 36%;
+      top: 78px;
+      .tim {
+        margin: 0;
+      }
+
+    }
+  }
+
+}
+
+@media only screen and(max-width: 768px) {
+  #post-detail-main .wrap .wrap1 article {
+    display: flex;
+    flex-direction: column;
+    header {
+      width: 100%;
+      position: relative;
+      left: 10px;
+    }
+    .anh-post {
+      width: 100%;
+    }
+    .right_comment {
+      width: 100%;
+      position: relative;
+
+    }
+  }
+}
+
+@media screen and(max-width: 480px) {
+
+  #post-detail-main .wrap .wrap1 article {
+    display: flex;
+    flex-direction: column;
+    header {
+      width: 50%;
+      position: relative;
+      left: 10px;
+      justify-content: center;
+    }
+    .anh-post {
+      width: 64%;
+    }
+    .right_comment {
+      width: 64%;
+      position: relative;
+      .tim {
+      }
+    }
+  }
+
+}
+
+#post-detail-main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  border: 1px solid #efeaea;
+  display: flex;
+  box-sizing: inherit;
+  .wrap {
+    position: relative;
+    padding: 40px 0;
+    min-width: 736px;
+    max-width: 935px;
+    margin: 0 auto 16px;
+    border: 0 solid #000;
+    box-sizing: inherit;
+    .wrap1 {
+      margin: 0 auto;
+      width: 100%;
+      align-items: center;
+      min-width: 736px;
+      border: 0 solid #000;
+      padding: 0;
+      position: relative;
+      box-sizing: inherit;
+      article {
+        background-color: white;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        border: 1px solid #e6e6e6;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        position: relative;
+        header {
+          border-bottom: 1px solid #efefef;
+          height: 78px;
+          margin-right: 0;
+          padding: 20px 0;
+
+          right: 24px;
+          top: 0;
+
+          .profile {
+            position: absolute;
+            left: 50px;
+            top: 33px;
+            a {
+              text-decoration: none;
+              color: black;
+              font-weight: 600;
+            }
+          }
+          .dot {
+            position: absolute;
+            top: 33px;
+            left: 118px;
+          }
+          .follow, .following {
+            position: absolute;
+            top: 33px;
+            left: 132px;
+            a {
+              text-decoration: none;
+              color: black;
+              font-weight: 600;
+
+            }
+          }
+          .profile-img {
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            a {
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              cursor: pointer;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+              }
+            }
+          }
+
+        }
+        .anh-post {
+
+          background-color: #fafafa;
+          margin-right: 335px;
+
+          img {
+            height: 100%;
+            width: 100%;
+            margin-bottom: -2px;
+            margin-top: 1px;
+          }
+        }
+        .right_comment {
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          padding-left: 24px;
+          padding-right: 24px;
+          bottom: 0;
+          .tim {
+            position: relative;
+
+            border-top: 1px solid #efefef;
+            #liked, #like {
+              text-decoration: none;
+              display: inline-block;
+              padding: 20px;
+              margin-left: -8px;
+              cursor: pointer;
+              span {
+                position: absolute;
+                height: 24px;
+                width: 24px;
+                top: 10px;
+                left: 0;
+                background: url(/img/icon.png);
+                background-size: 435px 401px;
+                background-repeat: no-repeat;
+              }
+            }
+            #liked span {
+              background-position: -388px -350px;
+            }
+            #like span {
+              background-position: -225px -350px;
+            }
+            #comment {
+              text-decoration: none;
+              display: inline-block;
+              padding: 20px;
+              margin-left: 4px;
+              cursor: pointer;
+              span {
+                position: absolute;
+                height: 24px;
+                width: 24px;
+                top: 10px;
+                left: 42px;
+                background: url(/img/icon.png);
+                background-size: 435px 401px;
+                background-repeat: no-repeat;
+                background-position: -350px -352px;
+              }
+            }
+
+            #saved, #save {
+              text-decoration: none;
+              display: inline-block;
+              padding: 20px;
+              margin-left: 170px;
+              cursor: pointer;
+              span {
+                position: absolute;
+                height: 24px;
+                width: 24px;
+                top: 10px;
+                left: 253px;
+                background: url(/img/icon.png);
+                background-size: 435px 401px;
+                background-repeat: no-repeat;
+              }
+            }
+            #saved span {
+              background-position: -25px -351px;
+            }
+            #save span {
+              background-position: -352px -218px;
+            }
+          }
+
+          .status {
+            margin: 0 -24px auto;
+            padding: 12px 24px;
+            overflow: auto;
+            min-height: 0;
+            position: relative;
+            .list {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              border: 0;
+              font: inherit;
+              vertical-align: baseline;
+              .item {
+                padding-bottom: 0;
+                overflow: hidden;
+                position: relative;
+                word-wrap: break-word;
+                margin-top: -5px;
+                padding-top: 5px;
+                a {
+                  text-decoration: none;
+                  color: black;
+                  margin-right: .3em;
+                  box-sizing: inherit;
+                  font-weight: 600;
+                  overflow: hidden;
+
+                }
+              }
+            }
+          }
+          .like_number a {
+            font: inherit;
+            font-weight: 600;
+          }
+          .day_ago {
+            a {
+              color: #999;
+              margin-bottom: 5px;
+              text-transform: uppercase;
+              time {
+                font-size: 10px;
+                letter-spacing: .2px;
+                @media (min-width: 736px) {
+                  line-height: 18px;
+                }
+              }
+            }
+          }
+          .sec-form {
+            margin-top: 4px;
+            border-top: 1px solid #efefef;
+            color: #999;
+            font-size: 14px;
+            line-height: 18px;
+            min-height: 56px;
+            padding: 16px 0;
+            justify-content: center;
+            position: relative;
+            form {
+              font: inherit;
+              position: relative;
+              textarea {
+                border: 0;
+                padding: 0;
+                resize: none;
+                outline: none;
+                width: 100%;
+                height: 18px;
+                max-height: 80px;
+                font: inherit;
+              }
+            }
+          }
+          .three_dots {
+            position: absolute;
+            bottom: 0;
+            right: 18px;
+            height: 52px;
+            top: auto;
+            justify-content: center;
+            button {
+              padding: 13px;
+              background-color: transparent;
+              border: 0;
+              cursor: pointer;
+              line-height: 18px;
+              position: relative;
+              bottom: -7px;
+              span {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                height: 16px;
+                width: 16px;
+                background: url(/img/icon.png);
+                background-repeat: no-repeat;
+                background-position: -413px -326px;
+                background-size: 435px 401px
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

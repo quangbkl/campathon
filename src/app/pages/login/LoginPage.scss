@@ -1,0 +1,93 @@
+.LoginPage {
+  background-color: #FAFAFA;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  a {
+    text-decoration: none;
+    color: #3897f0;
+  }
+
+  .Main {
+    text-align: center;
+    color: #262626;
+    margin: 12px auto;
+    max-width: 350px;
+
+    .MainForm {
+      border: 1px solid #E6E6E6;
+      padding: 10px 0;
+      background-color: #fff;
+      h1 {
+        text-indent: -9999px;
+        background: url(./font-crush-hunt.png) no-repeat center;
+      }
+      .Form {
+        color: #999999;
+        width: 100%;
+        padding: 0 40px;
+        h2 {
+          font-weight: 600;
+          line-height: 20px;
+          font-size: 17px;
+        }
+        input {
+          height: 36px;
+          width: 100%;
+          text-overflow: ellipsis;
+          font-size: 14px;
+          line-height: 18px;
+          padding: 10px;
+          background-color: #FAFAFA;
+          border: 1px solid #E6E6E6;
+          margin: 6px 0 0 0;
+        }
+        input:focus {
+          border: 1px solid #999999;
+          outline: none;
+        }
+        button {
+          cursor: pointer;
+          background: #3897f0;
+          color: #fff;
+          width: 100%;
+          margin-top: 12px;
+          border: none;
+          border-radius: 3px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 26px;
+          outline: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        p {
+          color: #999;
+          margin: 10px 20px;
+          font-size: 14px;
+          line-height: 18px;
+          text-align: center;
+        }
+
+      }
+    }
+
+    .RedirectLoginPage {
+      color: #262626;
+      font-size: 14px;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 1px;
+      margin-top: 20px;
+      padding: 14px;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        color: #3897f0;
+      }
+    }
+  }
+}

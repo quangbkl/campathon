@@ -1,0 +1,164 @@
+.HomePage {
+    padding-bottom: 30px;
+    background: #fafafa;
+
+    .post {
+        position: relative;
+        width: 95%;
+        max-width: 600px;
+        border-radius: 4px;
+        box-shadow: 0 9px 16px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: auto auto 16px;
+
+        * {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .userDetails {
+            padding: 12px;
+
+            .avatar {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                background-size: cover;
+                border-radius: 100%;
+                box-shadow: 0 0 0.5px rgb(126, 126, 126) inset;
+                vertical-align: middle;
+            }
+
+            .userName {
+                margin-left: 12px;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+
+        .postText {
+            padding: 12px 0 0 12px;
+        }
+
+        .loadComment {
+            font-size: 13px;
+            color: #999;
+            margin: 0;
+            padding: 0px 12px 0px;
+            cursor: pointer;
+        }
+
+        .likeText {
+            padding: 0 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .time {
+            padding: 6px 12px 9px 12px;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .likeButton {
+            padding: 4px 12px;
+            font-size: 20px;
+
+            .unlike, .like, .comment {
+                width: 24px;
+                height: 24px;
+                background-size: 435px 401px;
+                background-image: url("/img/icon.png");
+                display: inline-block;
+                background-repeat: no-repeat;
+            }
+            .like {
+                width: 24px;
+                height: 24px;
+                background-size: 435px 401px;
+                background-position: -388px -350px;
+                display: inline-block;
+                background-repeat: no-repeat;
+            }
+
+            .unlike {
+                background-image: url("/img/icon.png");
+                background-size: 435px 401px;
+                background-position: -50px -377.5px;
+            }
+
+            .comment {
+                margin-left: 12px;
+                background-position: -350px -352px;
+            }
+        }
+
+        .commentList {
+            padding: 9px 12px 4px;
+            font-size: 14px;
+        }
+
+        .userComment {
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        .commentForm {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            border-top: 0.5px solid #eee;
+
+            .commentInput {
+                position: absolute;
+                left: 0;
+                right: 50px;
+                height: 100%;
+            }
+
+            input {
+                background: none;
+                height: 100%;
+                width: 100%;
+                border: none;
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            button {
+                position: absolute;
+                right: 0;
+                width: 50px;
+                height: 100%;
+                border: none;
+                background: #eee;
+                transition: 0.25s;
+                color: #444;
+                font-size: 14px;
+            }
+
+            button:hover {
+                background: #3897f0;
+                color: #fff;
+            }
+            .pushComment {
+                background-image: url("/img/icon.png");
+                background-size: 435px 401px;
+                background-position: -388px 2px;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                margin-top: 3px;
+                margin-left: -4px;
+                transform: rotate(28deg);
+                transition: 0.25s;
+            }
+            button:hover .pushComment {
+                filter: brightness(800%);
+            }
+        }
+    }
+}
