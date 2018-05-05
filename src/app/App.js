@@ -9,7 +9,7 @@ import RegisterPage from "./pages/register/RegisterPage";
 import Footer from "./shared-components/footer/Footer";
 import FacebookGoogle from "./pages/login/FacebookGoogle";
 import Contact from "./pages/contact/Contact";
-import News from "./pages/news/News";
+import NewsPage from "./pages/news/NewsPage";
 
 class App extends Component {
     render() {
@@ -23,7 +23,7 @@ class App extends Component {
                     <Route path="/FacebookGoogle" component={FacebookGoogle}/>
                     <Route path="/register" component={RegisterPage}/>
                     <Route path ="/contact" component={Contact}/>
-                    <Route path ="/news" component={News}/>
+                    <Route path ="/news" component={NewsPage}/>
                     <Route component={PageNotFound}/>
                 </Switch>
                 <Footer/>
