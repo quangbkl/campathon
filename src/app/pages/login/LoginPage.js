@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {isAuthenticated, setAuthState, addAuthListener, removeAuthListener} from "../../../services/AuthServices";
-import {Link, Redirect} from "react-router-dom";
+import {addAuthListener, isAuthenticated, removeAuthListener, setAuthState} from "../../../services/AuthServices";
+import {Redirect} from "react-router-dom";
 import "./LoginPage.css";
 import Footer from "../../shared-components/footer/Footer";
 import {_login} from "../../../services/UserServices";
@@ -88,24 +88,42 @@ class LoginPage extends Component {
 
         return (
             <div className="LoginPage">
-                <div className="Main">
-                    <div className="MainForm">
-                        <h1 className="Title">Crush Hunt</h1>
-                        <form className="Form">
-                            <h2>Sign up to see photos and videos from your friends.</h2>
-                            <input type="text" placeholder="Email"
-                                   onChange={this._handleChangeInput.bind(this, 'email')} value={email} name="email"/>
-                            <input type="password" placeholder="Password"
-                                   onChange={this._handleChangeInput.bind(this, 'password')} value={password}
-                                   name="password"/>
-                            <button onClick={this._handleSubmit.bind(this)}>Log in</button>
-                            <p><Link to="/reset-password">Forgot Password?</Link></p>
-                            {errorMessage}
-                        </form>
-                    </div>
+                <div className="limiter">
+                    <div className="container-login100">
+                        <div className="wrap-login100">
+                            <form className="login100-form">
+                                <span className="login100-form-title">	Account Login</span>
+                                <div className="wrap-input100 rs1-wrap-input100"
+                                     data-validate="Type user name">
+                                    <input id="first-name" className="input100" type="text" name="username"
+                                           placeholder="User name"/>
+                                    <span className="focus-input100"></span>
+                                </div>
+                                <div className="wrap-input100 rs2-wrap-input100 validate-input m-b-20"
+                                     data-validate="Type password">
+                                    <input className="input100" type="password" name="pass" placeholder="Password"/>
+                                    <span className="focus-input100"></span>
+                                </div>
 
-                    <div className="RedirectLoginPage">
-                        <p>Don't have an account? <Link to="/register">Sign up</Link></p>
+                                <div className="container-login100-form-btn">
+                                    <button className="login100-form-btn">
+                                        Sign in
+                                    </button>
+                                </div>
+
+
+                                <a className="forgot-password" href="#" > Forgot password?</a>
+
+
+                                <div className="sign-up">
+                                    <a href="#">
+                                        Sign Up
+                                    </a>
+                                </div>
+                            </form>
+
+                            <div className="login100-more"><img className="background" src="https://nces.ed.gov/programs/coe/images/nav/coe_hp_new.png" alt=""/></div>
+                        </div>
                     </div>
                 </div>
                 <Footer/>
