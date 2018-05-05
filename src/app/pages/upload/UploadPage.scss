@@ -1,5 +1,110 @@
 .UploadPage {
-  .Main {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
+  .Main {
+    margin: auto;
+    width: 850px;
+    border: green solid 1px;
+    border-radius: 3px;
+    padding: 10px;
+
+    .FUpload {
+      width: 100%;
+      display: table;
+      clear: both;
+
+      span {
+        display:block;
+        float:left;
+        width:150px;
+        clear: both;
+        padding: 10px;
+      }
+
+      input {
+        float:left;
+        width: calc(100% - 200px);
+        border:0px;
+        padding: 10px;
+        min-width: 100px;
+        margin-bottom:10px;
+      }
+
+      input:focus {
+        border: none;
+        outline: none;
+      }
+
+      textarea {
+        float:left;
+        border:0px;
+        padding: 10px;
+        width: calc(100% - 200px);
+        height:140px;
+        resize: none;
+      }
+
+      textarea:focus {
+        border: none;
+        outline: none;
+      }
+
+      .File {
+        padding-left: 0px;
+      }
+
+      button {
+        display:block;
+        float:left;
+        clear: both;
+        cursor: pointer;
+        background-color: green;
+        color: #fff;
+        width: calc(100% - 200px);
+        margin: auto auto auto 150px;
+        border: none;
+        border-radius: 3px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 26px;
+        outline: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 3px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .UploadPage {
+    .Main {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .UploadPage {
+    .Main {
+      .FUpload {
+        input {
+          width: 100%;
+        }
+
+        textarea {
+          width: 100%;
+        }
+
+        button {
+          margin: auto;
+          width: 100%;
+        }
+      }
+    }
   }
 }
