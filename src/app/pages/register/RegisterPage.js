@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {Link, Redirect} from "react-router-dom";
 import "./RegisterPage.css";
-import Footer from "../../shared-components/footer/Footer";
 import {_register} from "../../../services/UserServices";
 
 
