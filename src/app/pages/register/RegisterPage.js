@@ -99,12 +99,12 @@ class RegisterPage extends Component {
 
                                 <div className="container-login100-form-btn">
                                     <button className="login100-form-btn">
-                                        Sign in
+                                        Sign up
                                     </button>
                                 </div>
 
-                                <div className="login-text">
-                                    Already have account? <Link to="/login"> Login</Link>
+                                <div className="sign-in-text">
+                                    Already have account? <Link to="/login"> Sign in</Link>
                                 </div>
                             </form>
 
@@ -114,7 +114,6 @@ class RegisterPage extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer/>
             </div>
         );
     }
