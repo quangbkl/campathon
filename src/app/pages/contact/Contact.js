@@ -2,28 +2,46 @@ import React, {Component} from 'react';
 import "./Contact.css";
 
 class Contact extends Component {
+    state = {
+        success: false,
+        email: '',
+        name: '',
+        type: '',
+        content: ''
+    };
+
+    _handleChangeInput(field, e) {
+        const {value} = e.target;
+        this.setState({
+            [field]: value
+        });
+    }
+
     render(){
+        const {}=this.state;
         return(
             <div className="Contact">
                 <div className="Title">
-                    <span className="icon"></span>
-                    <p>Contact me</p>
+                    <span className="ContactTitle">Liên hệ</span>
                 </div>
                 <div className="Form">
                     <form className="FormContact">
-                        <input className="name" type="text" name="username" placeholder="Tên"/>
-                        <input className="email" type="text" name="email" placeholder="Email" />
-                        <input className="type" type="text" name="type" placeholder="Loại"/>
-                        <select className="type">
-                            <option value="volvo">Liên hệ</option>
-                            <option value="saab">Góp ý</option>
-                            <option value="opel">Câu hỏi</option>
-                            <option value="audi">Lỗi nội dung</option>
-                            <option value="audi">Lỗi hệ thống</option>
-                            <option value="audi">Khác</option>
+                        <input className="Name" type="text" name="username" placeholder="Tên"
+                               onChange={this._handleChangeInput.bind(this, "name")}/>
+                        <input className="Email" type="text" name="email" placeholder="Email"
+                                   onChange={this._handleChangeInput.bind(this, "email")}/>
+                        <label className="Type">Loại</label>
+                        <select className="Select">
+                            <option value="0">Liên hệ</option>
+                            <option value="1">Góp ý</option>
+                            <option value="2">Câu hỏi</option>
+                            <option value="3">Lỗi nội dung</option>
+                            <option value="4">Lỗi hệ thống</option>
+                            <option value="5">Khác</option>
                         </select>
-                        <input className="content" type="text" name="content" placeholder="Nội dung"/>
-                        <button className="btn" type="text" value="Send">Gửi</button>
+                        <input className="Content" type="text" name="content" placeholder="Nội dung"
+                                   onChange={this._handleChangeInput.bind(this, "content")}/>
+                        <button className="Button" type="text" value="Send">Gửi</button>
                     </form>
                 </div>
             </div>
