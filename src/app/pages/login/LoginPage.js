@@ -6,6 +6,7 @@ import "./LoginPage.css";
 import Footer from "../../shared-components/footer/Footer";
 import {_login} from "../../../services/UserServices";
 import {Link} from "react-router-dom/umd/react-router-dom";
+import FacebookGoogle from "./FacebookGoogle";
 
 
 class LoginPage extends Component {
@@ -109,6 +110,7 @@ class LoginPage extends Component {
                                     <button className="login100-form-btn">
                                         Sign in
                                     </button>
+                                    <FacebookGoogle/>
                                 </div>
 
                                 <div className="sign-up-text">
