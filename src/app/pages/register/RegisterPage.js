@@ -10,20 +10,20 @@ class RegisterPage extends Component {
     state = {
         success: false,
         email: '',
-        name: '',
+        userName: '',
         password: '',
         confirmPassword: '',
         errorMessage: ''
     };
 
-    handleChangeInput(field, e) {
+    _handleChangeInput(field, e) {
         const {value} = e.target;
         this.setState({
             [field]: value
         });
     }
 
-    handleSubmit = (e) => {
+    _handleSubmit = (e) => {
         e.preventDefault();
         const {email, name, password} = this.state;
         if (this.checkForm()) {
@@ -73,29 +73,45 @@ class RegisterPage extends Component {
         const errorMessage = this.state.errorMessage ? <p className="ErrorMessage">{this.state.errorMessage}</p> : '';
 
         return (
-            <div className="RegisterPage">
-                <div className="Main">
-                    <div className="MainForm">
-                        <h1 className="Title">Crush Hunt</h1>
-                        <form className="Form">
-                            <h2>Sign up to see photos and videos from your friends.</h2>
-                            <input type="email" placeholder="Email"
-                                   onChange={this.handleChangeInput.bind(this, 'email')}/>
-                            <input type="text" placeholder="Full Name"
-                                   onChange={this.handleChangeInput.bind(this, 'name')}/>
-                            <input type="password" placeholder="Password"
-                                   onChange={this.handleChangeInput.bind(this, 'password')}/>
-                            <input type="password" placeholder="Confirm Password"
-                                   onChange={this.handleChangeInput.bind(this, 'confirmPassword')}/>
-                            <button onClick={this.handleSubmit}>Sign up
-                            </button>
-                            <p>By signing up, you agree to our Terms & Privacy Policy.</p>
-                            {errorMessage}
-                        </form>
-                    </div>
+            <div className="LoginPage">
+                <div className="limiter">
+                    <div className="container-login">
+                        <div className="wrap-login">
+                            <form className="login-form">
+                                <span className="login-form-title">	Register</span>
+                                <div className="wrap-input100 " data-validate="Type user name">
+                                    <input id="first-name" className="input" type="text" name="username"
+                                           placeholder="User name"
+                                           onChange={this._handleChangeInput.bind(this, "userName")}/>
+                                    <span className="focus-input"></span>
+                                </div>
+                                <div className="wrap-input100" data-validate="Type password">
+                                    <input className="input" type="password" placeholder="Password"
+                                           onChange={this._handleChangeInput.bind(this, "password")}/>
+                                    <span className="focus-input"></span>
+                                </div>
 
-                    <div className="RedirectRegisterPage">
-                        <p>Have an account? <Link to="/login">Log in</Link></p>
+                                <div className="wrap-input100" data-validate="Type password">
+                                    <input className="input" type="password" placeholder="Confirm password"
+                                           onChange={this._handleChangeInput.bind(this, "confirmPassword")}/>
+                                    <span className="focus-input"></span>
+                                </div>
+
+                                <div className="container-login100-form-btn">
+                                    <button className="login100-form-btn">
+                                        Sign in
+                                    </button>
+                                </div>
+
+                                <div className="login-text">
+                                    Already have account? <Link to="/login"> Login</Link>
+                                </div>
+                            </form>
+
+                            <div className="login100-more"><img className="background"
+                                                                src="https://nces.ed.gov/programs/coe/images/nav/coe_hp_new.png"
+                                                                alt=""/></div>
+                        </div>
                     </div>
                 </div>
                 <Footer/>

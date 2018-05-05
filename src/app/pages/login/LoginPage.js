@@ -1,17 +1,18 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {addAuthListener, isAuthenticated, removeAuthListener, setAuthState} from "../../../services/AuthServices";
+import {addAuthListener, isAuthenticated, setAuthState} from "../../../services/AuthServices";
 import {Redirect} from "react-router-dom";
 import "./LoginPage.css";
 import Footer from "../../shared-components/footer/Footer";
 import {_login} from "../../../services/UserServices";
+import {Link} from "react-router-dom/umd/react-router-dom";
 
 
 class LoginPage extends Component {
     state = {
         auth: isAuthenticated(),
         loading: false,
-        email: '',
+        userName: '',
         password: ''
     };
 
@@ -19,9 +20,6 @@ class LoginPage extends Component {
         addAuthListener(this._handleOnChangeAuth);
     }
 
-    componentWillUnmount() {
-        removeAuthListener(this._handleOnChangeAuth);
-    }
 
     _handleOnChangeAuth = () => {
         const {auth} = this.state;
@@ -36,7 +34,6 @@ class LoginPage extends Component {
 
     _handleChangeInput(field, e) {
         const {value} = e.target;
-
         this.setState({
             [field]: value
         });
@@ -92,16 +89,19 @@ class LoginPage extends Component {
                     <div className="container-login100">
                         <div className="wrap-login100">
                             <form className="login100-form">
+
                                 <span className="login100-form-title">	Account Login</span>
                                 <div className="wrap-input100 rs1-wrap-input100"
                                      data-validate="Type user name">
                                     <input id="first-name" className="input100" type="text" name="username"
-                                           placeholder="User name"/>
+                                           placeholder="User name"
+                                           onChange={this._handleChangeInput.bind(this, "userName")}/>
                                     <span className="focus-input100"></span>
                                 </div>
                                 <div className="wrap-input100 rs2-wrap-input100 validate-input m-b-20"
                                      data-validate="Type password">
-                                    <input className="input100" type="password" name="pass" placeholder="Password"/>
+                                    <input className="input100" type="password" name="pass" placeholder="Password"
+                                           onChange={this._handleChangeInput.bind(this, "password")}/>
                                     <span className="focus-input100"></span>
                                 </div>
 
@@ -111,22 +111,18 @@ class LoginPage extends Component {
                                     </button>
                                 </div>
 
-
-                                <a className="forgot-password" href="#" > Forgot password?</a>
-
-
-                                <div className="sign-up">
-                                    <a href="#">
-                                        Sign Up
-                                    </a>
+                                <div className="sign-up-text">
+                                    <Link to="/register"> Sign up </Link>
                                 </div>
+
                             </form>
 
-                            <div className="login100-more"><img className="background" src="https://nces.ed.gov/programs/coe/images/nav/coe_hp_new.png" alt=""/></div>
+                            <div className="login100-more"><img className="background"
+                                                                src="https://nces.ed.gov/programs/coe/images/nav/coe_hp_new.png"
+                                                                alt=""/></div>
                         </div>
                     </div>
                 </div>
-                <Footer/>
             </div>
         );
     }
