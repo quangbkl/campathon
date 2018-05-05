@@ -8,7 +8,7 @@ class UploadPage extends Component {
     }
 
     handleOnChangeFile() {
-
+        console.log("On Change File");
     }
 
     render() {
