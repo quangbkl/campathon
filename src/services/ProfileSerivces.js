@@ -1,4 +1,4 @@
-import APIServices from "./APIServices";
+import APIServices from "./APIGetPost";
 
 export const _getProfile = () => {
     return APIServices.makeAuthRequest({

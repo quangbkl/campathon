@@ -8,13 +8,14 @@ class PostElement extends Component {
     }
 
     handleOnClick() {
-        // console.log("Redirect to home");
-        // this.setState({
-        //     isRedirectLink: true
-        // })
+        console.log("Redirect to home");
+        this.setState({
+            isRedirectLink: true
+        })
 
         window.open(this.props.element.file_link);
-    }
+        }
+
 
     render() {
         const {file_image, file_title, file_hash_tag,} = this.props.element;

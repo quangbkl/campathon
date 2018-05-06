@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./ListPost.css"
 import PostElement from "./PostElement";
-import {getNewView, login} from  "./../../../services/APIServices";
+import {getNewView, login} from "../../../services/APIGetPost";
 
 class ListPost extends Component{
 
