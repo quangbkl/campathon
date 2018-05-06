@@ -36,7 +36,7 @@ class PostElement extends Component {
                     <div className="HashTag">{hashTag}</div>
                 </div>
 
-                <div className="ItemHover">View</div>
+                <div className="ItemHover">Chi tiết</div>
             </div>
         );
     }

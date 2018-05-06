@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import "./HomePage.css";
 import ListPost from "./ListPost";
-// import {NewsFile} from "../../../services/NewsFile";
 
 class HomePage extends Component {
     componentDidMount() {
@@ -20,9 +19,8 @@ class HomePage extends Component {
             .then(response => {
                 console.log(response);
             })
-            .catch(function(response) {
-                console.log(response);
-                debugger;
+            .catch(function(errow) {
+                console.log(errow);
             })
     }
 
