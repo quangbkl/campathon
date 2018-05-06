@@ -17,6 +17,7 @@ class Navbar extends Component {
                     </li>
                     <li>
                         <Link to="/news">Bản tin</Link>
+                        <span className="selected">  </span>
                     </li>
                     <li>
                         <Link to="/upload">Tài liệu</Link>

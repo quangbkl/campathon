@@ -96,7 +96,7 @@ class LoginPage extends Component {
                                     <FacebookGoogle/>
                                 </div>
 
-                                <div className="sign-up-text">
+                                <div className="sign-up-text">Chưa có tài khoản
                                     <Link to="/register"> Đăng ký </Link>
                                 </div>
 

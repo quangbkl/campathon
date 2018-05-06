@@ -22,21 +22,22 @@
 
     .Title {
       text-transform: uppercase!important;
-      font: 700 14px/21px "Open Sans", sans-serif;
+      font: 700 14px/21px "Arial", sans-serif;
       color: #474747;
       margin-top: 15px;
     }
 
     .Description {
 
-      font: 400 12px/18px "Open Sans", sans-serif;
+      font: 400 12px/18px "Arial", sans-serif;
       color: #888888;
       margin-top: 5px;
     }
   }
 
   .ItemHover {
-    font: 600 32px/36px "Open Sans", sans-serif;
+    font: 600 32px/36px "Arial", sans-serif;
+    color: white;
     position: absolute;
     top: 0;
     left: 0;
