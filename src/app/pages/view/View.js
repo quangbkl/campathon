@@ -3,50 +3,80 @@ import "./View.css";
 
 class View extends Component {
     state = {
-        title: 'Thông báo thu tiền học học kì 2',
-        tagName: '',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum ac nibh eu ullamcorper. Morbi in libero convallis, eleifend dui sit amet, elementum ligula. Etiam nunc felis, iaculis ac commodo in, accumsan ac odio. Suspendisse vitae dignissim tortor. Vestibulum leo eros, vulputate malesuada feugiat placerat, tempus vel sapien. Suspendisse enim neque, faucibus a nunc quis, tristique venenatis leo. Nullam tristique venenatis vestibulum. Vivamus pharetra velit vitae arcu faucibus, quis convallis nunc dapibus. Donec tempor est lorem. Quisque interdum, risus at hendrerit laoreet, mauris nulla imperdiet massa, vitae auctor lorem est eu nisi. Mauris tristique justo risus, vel rhoncus massa convallis eu. Cras mattis ante elementum arcu ornare posuere. Curabitur a dapibus leo, ac pretium arcu. In ut purus quam. Morbi a risus odio.',
-        description: '',
-        documentURL: '',
-        image: 'https://images.pexels.com/photos/55787/pexels-photo-55787.jpeg?auto=compress&cs=tinysrgb&h=350',
+        stt: '',
+        file_id: '',
+        file_link: '',
+        file_image: '',
+        file_title: '',
+        file_description: '',
+        file_hash_tag: '',
 
     }
 
-    render() {
-
-        const {title, content, image} = this.state;
-
-         console.log(this.props.match.params.id_post);
-        const {id_post} = this.props.match.params
-
-        getPost(){
-            const url = "https://hien-mau-team.herokuapp.com/get-post.php";
-            Request request = new Request(url,
+    getPost() {
+        const url = "https://hien-mau-team.herokuapp.com/get-post.php";
+        const request = new Request(
+            url, {
                 method: 'POST',
                 headers: {
-                'content-type': 'application/json'
-            },
-            body: {
-                username: username,
-                    name: name,
-                    password: password,
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: {
+                    id: this.props.match.params.id_post,
+                }
+
+            })
+        ;
+        return fetch(request).then(response => {
+            console.log(response);
+            return response[0].json()
+        });
+    }
+
+    componentDidMount() {
+        this.getPost().then(response => {
+
+                const {stt, file_id, file_link, file_title, file_description, file_image, file_hash_tag,} = response;
+                this.setState({
+                    stt: stt,
+                    file_id: file_id,
+                    file_link: file_link,
+                    file_image: file_image,
+                    file_title: file_title,
+                    file_description: file_description,
+                    file_hash_tag: file_hash_tag,
+                });
             }
+        )
+    }
 
-                )
 
-        }
+    render() {
+
+        const {
+            stt,
+            file_id,
+            file_link,
+            file_image,
+            file_title,
+            file_description,
+            file_hash_tag,
+        } = this.state;
+
+
+        const {id_post} = this.props.match.params
 
 
         return (
             <div className="view-container">
                 <div className="title-container">
-                    <img src={image} className="image"/>
-                    <span className="title">{title}</span>
+                    <img src={file_image} className="image"/>
+                    <span className="title">{file_title}</span>
 
                 </div>
                 <div className="content">
                     <p>
-                        {content}
+                        {file_description}
                     </p>
                 </div>
 

@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {Link, Redirect} from "react-router-dom";
 import "./RegisterPage.css";
-import axios from 'axios';
 
 class RegisterPage extends Component {
     state = {
@@ -24,46 +23,33 @@ class RegisterPage extends Component {
     _handleOnSubmit(e) {
         e.preventDefault();
         const {userName, name, password, confirmPassword} = this.state;
-        //
-        // debugger;
-        //
-        // // register(userName, name, password)
-        // this.register(userName, name, password)
-        //     .then(response => {
-        //         const {success} = response;
-        //         console.log(userName, name, password);
-        //         debugger;
-        //         if (success) {
-        //             this.props.onAuth(true);
-        //         }
-        //         else {
-        //             alert("Tài khoản hoặc mật khẩu không hợp lệ!");
-        //         }
-        //     });
-        // const url = '';
-        // const request = new Request(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/x-www-form-urlencoded'
-        //     },
-        //     body:
-        //
-        // });
-        const payload = {
-            username: "asdfghjkl",
-            name: "asdfghjkl",
-            password: "asdfghjkl",
-        };
 
-        axios.post('https://hien-mau-team.herokuapp.com/account/create.php', payload)
-            .then(response =>{
-                console.log(response);
-            })
-        // return fetch(request).then(response => {
-        //     return response.json();
-        // });
+
+        this.register().then(response=>{
+            console.log(response);
+        })
+
     };
 
+    register() {
+        const url = 'https://hien-mau-team.herokuapp.com/account/create.php';
+        const request = new Request(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: JSON.stringify({
+                username: "12345",
+                name: "0989890",
+                password: "098765431"
+            })
+
+        });
+
+        return fetch(request).then(response => {
+            return response.json();
+        });
+    }
 
     render() {
         if (this.state.success) {
