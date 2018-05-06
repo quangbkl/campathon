@@ -15,9 +15,14 @@ class HomePage extends Component {
             method: 'POST'
         })
             .then(function(response) {
+                return response.json();
+            })
+            .then(response => {
                 console.log(response);
-            }).catch(function(response) {
+            })
+            .catch(function(response) {
                 console.log(response);
+                debugger;
             })
     }
 
