@@ -8,8 +8,8 @@ class UploadPage extends Component {
     }
 
     handleOnChangeFile(e) {
-        this.setState({file: e.target.value});
-        // console.log("On Change File");
+        // this.setState();
+        console.log("On Change File");
     }
 
     handleSubmit(e) {
