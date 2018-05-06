@@ -14,7 +14,7 @@ class ListPost extends Component {
 
                 <ul>
                     {
-                        data.map((element) =>
+                        Object.values(data).map( (element) =>
                             <li>
                                 <PostElement element={element}/>
                             </li>
