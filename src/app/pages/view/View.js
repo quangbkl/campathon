@@ -16,11 +16,13 @@ class View extends Component {
 
         const {title, content, image} = this.state;
 
+
         return (
             <div className="view-container">
                 <div className="title-container">
                     <img src={image} className="image"/>
                     <span className="title">{title}</span>
+
                 </div>
                 <div className="content">
                     <p>

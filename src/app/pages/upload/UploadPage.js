@@ -7,8 +7,13 @@ class UploadPage extends Component {
         file: ''
     }
 
-    handleOnChangeFile() {
-        console.log("On Change File");
+    handleOnChangeFile(e) {
+        this.setState({file: e.target.value});
+        // console.log("On Change File");
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
     }
 
     render() {
@@ -17,15 +22,17 @@ class UploadPage extends Component {
                 <div className="Main">
                     <form className="FUpload">
                         <span>Tên tài liệu</span>
-                        <input type="text" name="name" className="title" placeholder="Nhập tên tài liệu" />
+                        <input type="text" name="name" className="title" placeholder="Nhập tên tài liệu"/>
 
                         <span>Mô tả</span>
-                        <textarea className="message" placeholder="Nhập mô tả" ></textarea>
+                        <textarea className="message" placeholder="Nhập mô tả"></textarea>
 
                         <span>Tài liệu</span>
                         <input className="File" type="file" onChange={this.handleOnChangeFile}/>
 
-                        <button>Đăng</button>
+                        <button onClick={this.handleSubmit.bind(this)}
+                        >Đăng
+                        </button>
                     </form>
                 </div>
             </div>

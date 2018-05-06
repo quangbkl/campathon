@@ -28,20 +28,22 @@
       input {
         float:left;
         width: calc(100% - 200px);
-        border:0px;
+        border: 1px solid #ccc;
         padding: 10px;
         min-width: 100px;
         margin-bottom:10px;
+
       }
 
       input:focus {
-        border: none;
+        border: 1px solid #ccc;
+      ;
         outline: none;
       }
 
       textarea {
         float:left;
-        border:0px;
+        border: 1px solid #ccc;
         padding: 10px;
         width: calc(100% - 200px);
         height:140px;
@@ -49,7 +51,7 @@
       }
 
       textarea:focus {
-        border: none;
+        border: 1px solid #ccc;
         outline: none;
       }
 
