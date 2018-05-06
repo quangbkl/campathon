@@ -53,33 +53,33 @@ class RegisterPage extends Component {
                     <div className="container-register">
                         <div className="wrap-register">
                             <form className="register-form">
-                                <span className="register-form-title">	Register</span>
+                                <span className="register-form-title">Đăng ký</span>
                                 <div className="wrap-register-input " data-validate="Type user name">
                                     <input id="first-name" className="input" type="text" name="username"
-                                           placeholder="User name"
+                                           placeholder="Tên người dùng"
                                            onChange={this._handleChangeInput.bind(this, "userName")}/>
                                     <span className="focus-register-input"></span>
                                 </div>
                                 <div className="wrap-register-input" data-validate="Type password">
-                                    <input className="input" type="password" placeholder="Password"
+                                    <input className="input" type="password" placeholder="Mật khẩu"
                                            onChange={this._handleChangeInput.bind(this, "password")}/>
                                     <span className="focus-register-input"></span>
                                 </div>
 
                                 <div className="wrap-register-input" data-validate="Type password">
-                                    <input className="input" type="password" placeholder="Confirm password"
+                                    <input className="input" type="password" placeholder="Xác nhận mật khẩu"
                                            onChange={this._handleChangeInput.bind(this, "confirmPassword")}/>
                                     <span className="focus-register-input"></span>
                                 </div>
 
                                 <div className="container-register-form-btn">
                                     <button className="login100-form-btn">
-                                        Sign up
+                                        Đăng ký
                                     </button>
                                 </div>
 
                                 <div className="sign-in-text">
-                                    Already have account? <Link to="/login"> Sign in</Link>
+                                    Đã có tài khoản? <Link to="/login"> Đăng nhập</Link>
                                 </div>
                             </form>
 

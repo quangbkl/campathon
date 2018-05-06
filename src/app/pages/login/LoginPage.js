@@ -74,30 +74,30 @@ class LoginPage extends Component {
                         <div className="wrap-login">
                             <form className="login-form">
 
-                                <span className="login-form-title">	Account Login</span>
+                                <span className="login-form-title">ĐĂNG NHẬP</span>
                                 <div className="wrap-input"
                                      data-validate="Type user name">
                                     <input id="first-name" className="input" type="text" name="username" value={email}
-                                           placeholder="User name"
+                                           placeholder="Tên người dùng"
                                            onChange={this._handleChangeInput.bind(this, "username")}/>
                                     <span className="focus-input100"></span>
                                 </div>
                                 <div className="wrap-input"
                                      data-validate="Type password">
-                                    <input className="input" type="password" name="pass" placeholder="Password" value={password}
+                                    <input className="input" type="password" name="pass" placeholder="Mật khẩu" value={password}
                                            onChange={this._handleChangeInput.bind(this, "password")}/>
                                     <span className="focus-input"></span>
                                 </div>
 
                                 <div className="container-login-form-btn">
                                     <button className="login-form-btn">
-                                        Sign in
+                                        Đăng nhập
                                     </button>
                                     <FacebookGoogle/>
                                 </div>
 
                                 <div className="sign-up-text">
-                                    <Link to="/register"> Sign up </Link>
+                                    <Link to="/register"> Đăng ký </Link>
                                 </div>
 
                             </form>
