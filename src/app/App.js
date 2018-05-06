@@ -25,7 +25,7 @@ class App extends Component {
                     <Route path="/register" component={RegisterPage}/>
                     <Route path ="/contact" component={Contact}/>
                     <Route path ="/news" component={NewsPage}/>
-                    <Route path ="/view" component={View}/>
+                    <Route path ="/view/:id_post" component={View}/>
                     <Route component={PageNotFound}/>
                 </Switch>
                 <Footer/>
