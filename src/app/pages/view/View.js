@@ -16,9 +16,25 @@ class View extends Component {
 
         const {title, content, image} = this.state;
 
-        // console.log(this.props.match.params.id_post);
+         console.log(this.props.match.params.id_post);
         const {id_post} = this.props.match.params
 
+        getPost(){
+            const url = "https://hien-mau-team.herokuapp.com/get-post.php";
+            Request request = new Request(url,
+                method: 'POST',
+                headers: {
+                'content-type': 'application/json'
+            },
+            body: {
+                username: username,
+                    name: name,
+                    password: password,
+            }
+
+                )
+
+        }
 
 
         return (

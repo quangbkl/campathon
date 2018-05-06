@@ -1,4 +1,4 @@
-import APIServices from "./APIServices";
+import APIServices from "./APIGetPost";
 
 export const _login = (email, password) => {
     return APIServices.makeRequest({

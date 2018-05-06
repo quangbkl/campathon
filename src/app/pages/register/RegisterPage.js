@@ -2,15 +2,13 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {Link, Redirect} from "react-router-dom";
 import "./RegisterPage.css";
-import {_register} from "../../../services/UserServices";
-import {setToken} from "../../../services/StorageServices";
-
+import axios from 'axios';
 
 class RegisterPage extends Component {
     state = {
         success: false,
-        email: '',
-        username: '',
+        name: '',
+        userName: '',
         password: '',
         confirmPassword: '',
         errorMessage: ''
@@ -25,21 +23,46 @@ class RegisterPage extends Component {
 
     _handleOnSubmit(e) {
         e.preventDefault();
-        const {email, password} = this.state;
-        _register({email, password})
-            .then(response => {
-                const {success, data} = response;
-                if (success) {
-                    const {accessToken} = data;
-                    this.props.onAuth(true);
-                    setToken(accessToken);
-                }
-                else {
-                    alert("Tài khoản hoặc mật khẩu sai !");
-                }
-            });
+        const {userName, name, password, confirmPassword} = this.state;
+        //
+        // debugger;
+        //
+        // // register(userName, name, password)
+        // this.register(userName, name, password)
+        //     .then(response => {
+        //         const {success} = response;
+        //         console.log(userName, name, password);
+        //         debugger;
+        //         if (success) {
+        //             this.props.onAuth(true);
+        //         }
+        //         else {
+        //             alert("Tài khoản hoặc mật khẩu không hợp lệ!");
+        //         }
+        //     });
+        // const url = '';
+        // const request = new Request(url, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/x-www-form-urlencoded'
+        //     },
+        //     body:
+        //
+        // });
+        const payload = {
+            username: "asdfghjkl",
+            name: "asdfghjkl",
+            password: "asdfghjkl",
+        };
 
-    }
+        axios.post('https://hien-mau-team.herokuapp.com/account/create.php', payload)
+            .then(response =>{
+                console.log(response);
+            })
+        // return fetch(request).then(response => {
+        //     return response.json();
+        // });
+    };
 
 
     render() {
@@ -48,18 +71,25 @@ class RegisterPage extends Component {
         }
 
         return (
-            <div className="LoginPage">
+            <div className="RegisterPage">
                 <div className="limiter">
                     <div className="container-register">
                         <div className="wrap-register">
                             <form className="register-form">
                                 <span className="register-form-title">Đăng ký</span>
                                 <div className="wrap-register-input " data-validate="Type user name">
-                                    <input id="first-name" className="input" type="text" name="username"
+                                    <input id="first-name" className="input" type="text" name="name"
                                            placeholder="Tên người dùng"
+                                           onChange={this._handleChangeInput.bind(this, "name")}/>
+                                    <span className="focus-register-input"></span>
+                                </div>
+                                <div className="wrap-register-input " data-validate="Type user name">
+                                    <input id="first-name" className="input" type="text" name="username"
+                                           placeholder="Tên đăng nhập"
                                            onChange={this._handleChangeInput.bind(this, "userName")}/>
                                     <span className="focus-register-input"></span>
                                 </div>
+
                                 <div className="wrap-register-input" data-validate="Type password">
                                     <input className="input" type="password" placeholder="Mật khẩu"
                                            onChange={this._handleChangeInput.bind(this, "password")}/>
@@ -73,7 +103,7 @@ class RegisterPage extends Component {
                                 </div>
 
                                 <div className="container-register-form-btn">
-                                    <button className="login100-form-btn">
+                                    <button className="login100-form-btn" onClick={this._handleOnSubmit.bind(this)}>
                                         Đăng ký
                                     </button>
                                 </div>

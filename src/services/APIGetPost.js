@@ -1,5 +1,4 @@
-
-const  getPostList = () => {
+const getPostList = () => {
     const url = 'https://hien-mau-team.herokuapp.com/new-post.php';
     const request = new Request(url, {
         method: 'POST',
@@ -13,4 +12,5 @@ const  getPostList = () => {
     });
 };
 
-export default  getPostList();
+export default getPostList();
+
