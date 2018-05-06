@@ -7,7 +7,8 @@ class Contact extends Component {
         email: '',
         name: '',
         type: '',
-        content: ''
+        content: '',
+        isSent: false
     };
 
     _handleChangeInput(field, e) {
@@ -19,11 +20,19 @@ class Contact extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
+
+        setTimeout(()=>{
+            this.setState({
+                isSent: true,
+            });
+        },2000);
     }
 
     render(){
-        const {email,name,content}=this.state;
-        return(
+        const {email,name,content, isSent}=this.state;
+        return (
+            isSent?<div className="Contact">Cảm ơn bạn đã gửi phản hồi cho chúng tôi</div>:
+
             <div className="Contact">
                 <div className="Title">
                     <span className="ContactTitle">Liên hệ</span>
