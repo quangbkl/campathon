@@ -15,12 +15,12 @@ class PostElement extends Component {
     }
 
     render() {
-        const {image, title, hashTag, link} = this.props.element;
+        const {image, title, description, link} = this.props.element;
         const {isRedirectLink} = this.state;
 
         if (isRedirectLink) {
             return (
-                <Redirect to={link}/>
+                <Redirect to={"/view"+link}/>
             );
         }
 
@@ -33,7 +33,7 @@ class PostElement extends Component {
 
                     <div className="Title">{title}</div>
 
-                    <div className="HashTag">{hashTag}</div>
+                    <div className="Description">{description}</div>
                 </div>
 
                 <div className="ItemHover">View</div>

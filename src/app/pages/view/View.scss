@@ -1,0 +1,66 @@
+.view-container {
+
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: auto;
+
+  .title-container {
+    display: grid;
+    grid-template-columns: auto;
+    .image {
+      margin: auto;
+
+      horiz-align: center;
+      box-sizing: border-box;
+
+      line-height: 24px;
+      text-align: center;
+      max-width: 100%;
+      height: auto;
+    }
+    .title {
+      background-color: rgba(0, 0, 0, 0);
+      box-sizing: border-box;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      display: inline;
+      font-family: "Segoe UI";
+      font-size: 80px;
+      font-weight: 500;
+      height: auto;
+      line-height: 88px;
+      outline-color: rgb(0, 0, 0);
+      outline-style: none;
+      outline-width: 0px;
+      text-align: center;
+      text-decoration-color: rgb(0, 0, 0);
+      text-decoration-line: none;
+      text-decoration-style: solid;
+      text-size-adjust: 100%;
+      transition-delay: 0s;
+      transition-duration: 0.5s;
+      transition-property: all;
+      transition-timing-function: ease;
+      width: auto;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    }
+
+  }
+
+  .content {
+    margin-top: 12px;
+    color: rgb(34, 34, 34);
+    font-family: "Segoe UI";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32.4px;
+    text-align: center;
+    text-size-adjust: 100%;
+
+  }
+}

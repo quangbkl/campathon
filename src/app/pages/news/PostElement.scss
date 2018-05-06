@@ -27,8 +27,8 @@
       margin-top: 15px;
     }
 
-    .HashTag {
-      text-transform: uppercase!important;
+    .Description {
+
       font: 400 12px/18px "Open Sans", sans-serif;
       color: #888888;
       margin-top: 5px;
@@ -46,5 +46,6 @@
     background-color: rgba(0, 0, 0, 0.1);
     line-height: calc(40px + 15vw);
     text-align: center;
+    transition: all 0.4s;
   }
 }
