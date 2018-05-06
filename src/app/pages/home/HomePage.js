@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import "./HomePage.css";
 import ListPost from "./ListPost";
-
 import getNewPost from "../../../services/APIServices";
 
 class HomePage extends Component {
