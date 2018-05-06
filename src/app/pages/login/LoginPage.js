@@ -1,18 +1,19 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {addAuthListener, isAuthenticated, setAuthState} from "../../../services/AuthServices";
+import {addAuthListener, isAuthenticated} from "../../../services/AuthServices";
 import {Redirect} from "react-router-dom";
 import "./LoginPage.css";
 import {_login} from "../../../services/UserServices";
 import {Link} from "react-router-dom/umd/react-router-dom";
 import FacebookGoogle from "./FacebookGoogle";
+import {setToken} from "../../../services/StorageServices";
 
 
 class LoginPage extends Component {
     state = {
         auth: isAuthenticated(),
         loading: false,
-        userName: '',
+        email: '',
         password: ''
     };
 
@@ -39,44 +40,27 @@ class LoginPage extends Component {
         });
     }
 
-    _handleSubmit(e) {
+    _handleOnSubmit(e) {
         e.preventDefault();
         const {email, password} = this.state;
-
-        if (this._checkForm())
-            _login(email, password).then(response => {
-                if (response.success) {
-                    const {data} = response;
-                    const {accessToken, user} = data;
-                    setAuthState({accessToken, user});
-                } else {
-                    this.setState({
-                        errorMessage: response.message //Display error if server return success false
-                    })
+        _login({email, password})
+            .then(response => {
+                const {success, data} = response;
+                if (success) {
+                    const {accessToken} = data;
+                    this.props.onAuth(true);
+                    setToken(accessToken);
                 }
-            }).catch();
+                else {
+                    alert("Tài khoản hoặc mật khẩu sai !");
+                }
+            });
 
     }
 
-    _checkForm() {
-        const {email, password} = this.state;
-        let errorMessage = '';
-        if (email === '') {
-            errorMessage = 'Email must not be empty';
-        } else if (password === '') {
-            errorMessage = 'Password must not be empty';
-        }
-
-        this.setState({
-            errorMessage: errorMessage
-        });
-
-        return !errorMessage;
-    }
 
     render() {
         const {auth} = this.state;
-        const errorMessage = this.state.errorMessage ? <p className="ErrorMessage">{this.state.errorMessage}</p> : '';
         if (auth) {
             return <Redirect to="/"/>;
         }
@@ -93,14 +77,14 @@ class LoginPage extends Component {
                                 <span className="login-form-title">	Account Login</span>
                                 <div className="wrap-input"
                                      data-validate="Type user name">
-                                    <input id="first-name" className="input" type="text" name="username"
+                                    <input id="first-name" className="input" type="text" name="username" value={email}
                                            placeholder="User name"
-                                           onChange={this._handleChangeInput.bind(this, "userName")}/>
+                                           onChange={this._handleChangeInput.bind(this, "username")}/>
                                     <span className="focus-input100"></span>
                                 </div>
                                 <div className="wrap-input"
                                      data-validate="Type password">
-                                    <input className="input" type="password" name="pass" placeholder="Password"
+                                    <input className="input" type="password" name="pass" placeholder="Password" value={password}
                                            onChange={this._handleChangeInput.bind(this, "password")}/>
                                     <span className="focus-input"></span>
                                 </div>

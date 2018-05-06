@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 import {Link, Redirect} from "react-router-dom";
 import "./RegisterPage.css";
 import {_register} from "../../../services/UserServices";
+import {setToken} from "../../../services/StorageServices";
 
 
 class RegisterPage extends Component {
     state = {
         success: false,
         email: '',
-        userName: '',
+        username: '',
         password: '',
         confirmPassword: '',
         errorMessage: ''
@@ -22,45 +23,22 @@ class RegisterPage extends Component {
         });
     }
 
-    _handleSubmit = (e) => {
+    _handleOnSubmit(e) {
         e.preventDefault();
-        const {email, name, password} = this.state;
-        if (this.checkForm()) {
-            _register(email, name, password).then(response => {
-                if (response.success) {
-                    this.setState({
-                        success: true
-                    })
+        const {email, password} = this.state;
+        _register({email, password})
+            .then(response => {
+                const {success, data} = response;
+                if (success) {
+                    const {accessToken} = data;
+                    this.props.onAuth(true);
+                    setToken(accessToken);
                 }
                 else {
-                    this.setState({
-                        errorMessage: response.message //Display error if server return success false
-                    })
+                    alert("Tài khoản hoặc mật khẩu sai !");
                 }
+            });
 
-
-            }).catch();
-        }
-    }
-
-    checkForm() {
-        const {email, name, password, confirmPassword} = this.state;
-        let errorMessage = '';
-        if (email === '') {
-            errorMessage = 'Email must not be empty';
-        } else if (name === '') {
-            errorMessage = 'Name must not be empty';
-        } else if (password === '') {
-            errorMessage = 'Password must not be empty';
-        } else if (password !== confirmPassword) {
-            errorMessage = 'Password and Confirm password must match';
-        }
-
-        this.setState({
-            errorMessage: errorMessage
-        });
-
-        return !errorMessage;
     }
 
 
@@ -68,8 +46,6 @@ class RegisterPage extends Component {
         if (this.state.success) {
             return <Redirect to="/login"/>
         }
-
-        const errorMessage = this.state.errorMessage ? <p className="ErrorMessage">{this.state.errorMessage}</p> : '';
 
         return (
             <div className="LoginPage">
